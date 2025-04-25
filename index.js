@@ -20,5 +20,7 @@ client.on('messageCreate', (message) => {
     message.reply('Xin chào! Tôi là bot của bạn.');
   }
 });
-
+if (message.content.startsWith('!ping')) {
+  message.reply('Pong!');
+}
 client.login(process.env.DISCORD_TOKEN);
