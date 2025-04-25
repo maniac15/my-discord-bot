@@ -19,8 +19,10 @@ client.on('messageCreate', (message) => {
   if (message.content.startsWith('!hello')) {
     message.reply('Xin chào! Tôi là bot của bạn.');
   }
+
+  if (message.content.startsWith('!ping')) {
+    message.reply('PONG!');
+  }
 });
-if (message.content.startsWith('!ping')) {
-  message.reply('Pong!');
-}
+
 client.login(process.env.DISCORD_TOKEN);
